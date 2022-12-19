@@ -15,9 +15,6 @@
 
   
   
-  
-  
-  
     
   
 
@@ -49,9 +46,9 @@
 
 	
 
-<title>Hello World | fteychene-learning</title>
-<meta name="description" content="Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.">
-<link rel="canonical" href="https://fteychene.github.io/learning-courses/blog/hello-world/">
+<title>Getting-started | fteychene-learning</title>
+<meta name="description" content="Choose your doc">
+<link rel="canonical" href="https://fteychene.github.io/learning-courses/docs/getting-started/introduction/">
 
 
 
@@ -88,8 +85,8 @@
           {
             "@type": "ListItem",
             "position":  2 ,
-            "name": "Blog",
-            "item": "https://fteychene.github.io/learning-courses/blog/"
+            "name": "Docs",
+            "item": "https://fteychene.github.io/learning-courses/docs/"
           },
         
       
@@ -109,15 +106,32 @@
           {
             "@type": "ListItem",
             "position":  3 ,
-            "name": "Hello World",
-            "item": "https://fteychene.github.io/learning-courses/blog/hello-world/"
+            "name": "Getting Started",
+            "item": "https://fteychene.github.io/learning-courses/docs/getting-started/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Introduction",
+            "item": "https://fteychene.github.io/learning-courses/docs/getting-started/introduction/"
           },
         
       
     
   }
 </script>
-
 
 
 
@@ -139,7 +153,9 @@
 
   
 
-<body class="blog single">
+<body class="docs single">
+  
+  
   
   
 <div class="header-bar fixed-top"></div>
@@ -169,12 +185,11 @@
 				
 				
 				
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Docs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/blog/">Blog</a>
-				</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Courses</a>
+						</li>
+					
 				
 			</ul>
 			<div class="break order-6 d-md-none"></div>
@@ -194,37 +209,108 @@
   
 <div class="wrap container" role="document">
   <div class="content">
-    <div class="row justify-content-center">
-      <div class="col-md-12 col-lg-10 col-xxl-8">
-        <article>
-          <div class="blog-header">
-            <h1>Hello World</h1>
-            
-<p><small>Posted 2021-05-01 05:19:42 by <a class="stretched-link position-relative" href="https://fteychene.github.io/learning-courses/authors/fteychene/">fteychene</a>&nbsp;&hyphen;&nbsp;<strong>1&nbsp;min read</strong></small><p>
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link active" href="https://fteychene.github.io/learning-courses/docs/getting-started/introduction/">Getting-started</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Ansible</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/">Ansible</a></li>
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/ansible/basics/">Basic</a></li>
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/ansible/inventory/">Inventory</a></li>
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/ansible/playbooks/">Playbooks</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
 
-          </div>
-          <p class="lead">This is the source code of the traditional <b>Hello World</b> program.</p>
-          <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// This is a comment, and is ignored by the compiler
-</span><span>
-</span><span style="color:#65737e;">// This is the main function
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#65737e;">// Statements here are executed when the compiled binary is called
-</span><span>
-</span><span>    </span><span style="color:#65737e;">// Print text to the console
-</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Hello World!</span><span>&quot;);
-</span><span>}
-</span></code></pre>
-<p><code>println!</code> is a macro that prints text to the console.</p>
-<p>A binary can be generated using the Rust compiler: <code>rustc</code>.</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> rustc hello.rs
-</span></code></pre>
-<p><code>rustc</code> will produce a <code>hello</code> binary that can be executed.</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> ./hello
-</span><span style="color:#bf616a;">Hello</span><span> World!
-</span></code></pre>
+	  
+  
 
-        </article>
-      </div>
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Getting-started</h1>
+        <p class="lead">Courses are grouped by theme. Chooe the one you want to follor</p>
+        <h2 id="quick-start">Quick Start</h2>
+<p>Look at the sessions available and choose the one you want.</p>
+<h2 id="go-further">Go further</h2>
+<p>Thoses courses are created for students on open sources projects.<br />
+Go to each solution website for all the ressources availables.</p>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+          
+          
+          <a class="ms-auto" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;ansible&#x2F;introduction&#x2F;">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                Ansible &rarr;
+              </div>
+            </div>
+          </a>
+          
+          
+          
+        
+      
+    
+  
+</div>
+
+      </main>
     </div>
   </div>
 </div>

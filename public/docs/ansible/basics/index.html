@@ -182,12 +182,11 @@
 				
 				
 				
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Docs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/blog/">Blog</a>
-				</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Courses</a>
+						</li>
+					
 				
 			</ul>
 			<div class="break order-6 d-md-none"></div>
@@ -218,6 +217,16 @@
 					
 					
 					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/getting-started/introduction/">Getting-started</a></li>
+							
+					</ul>
+					
+					
+					
+					
 							<h3>Ansible</h3>
 							<ul class="list-unstyled">
 							                           
@@ -244,19 +253,16 @@
   			<nav id="TableOfContents">
   					<ul>
   							
-  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#basics">Basics</a></li>
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#welcome-inventories">Welcome inventories</a></li>
   							
-  									<ul>
-  											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#inventory">Inventory</a></li>
-  											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#connection-user">Connection user</a></li>
-  											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#ad-hoc-commands">Ad-hoc commands</a></li>
-  											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#excercice">Excercice</a></li>
-  											
-  									</ul>
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#connection-user">Connection user</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#ad-hoc-commands">Ad-hoc commands</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/basics/#exercice">Exercice</a></li>
   							
   							
   					</ul>
@@ -267,9 +273,8 @@
 
       <main class="docs-content col-lg-11 col-xl-9">
         <h1>Basic</h1>
-        <p class="lead">Ansible - Basics</p>
-        <h2 id="basics">Basics</h2>
-<h3 id="inventory">Inventory</h3>
+        
+        <h2 id="welcome-inventories">Welcome inventories</h2>
 <p>Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory, which defaults to being saved in the location <code>/etc/ansible/hosts</code>. You can specify a different inventory file using the -i <path> option on the command line.</p>
 <p>To work on your new configured VM, add it's ip to the ansible inventory file <code>/etc/ansible/hosts</code></p>
 <pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">echo</span><span> 192.168.0.2 &gt;&gt; /etc/ansible/hosts
@@ -280,7 +285,7 @@
 </span></code></pre>
 <p>The <code>-u</code> option define the suer to connect with on the VM.<br />
 Th <code>-m</code> define the module to be executed on VMs from the all group</p>
-<h3 id="connection-user">Connection user</h3>
+<h2 id="connection-user">Connection user</h2>
 <p>If you would like to access sudo mode, there are also flags to do that:</p>
 <pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># as bruce
 </span><span style="color:#bf616a;">$</span><span> ansible all</span><span style="color:#bf616a;"> -m</span><span> ping</span><span style="color:#bf616a;"> -u</span><span> bruce
@@ -290,7 +295,7 @@ Th <code>-m</code> define the module to be executed on VMs from the all group</p
 </span><span style="color:#bf616a;">$</span><span> ansible all</span><span style="color:#bf616a;"> -m</span><span> ping</span><span style="color:#bf616a;"> -u</span><span> bruce</span><span style="color:#bf616a;"> -b --become-user</span><span> batman
 </span></code></pre>
 <p>(The sudo implementation is changeable in Ansible’s configuration file if you happen to want to use a sudo replacement. Flags passed to sudo (like -H) can also be set there.)</p>
-<h3 id="ad-hoc-commands">Ad-hoc commands</h3>
+<h2 id="ad-hoc-commands">Ad-hoc commands</h2>
 <p>Now run a live command on all of your nodes:</p>
 <pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> ansible all</span><span style="color:#bf616a;"> -u</span><span> vagrant</span><span style="color:#bf616a;"> -a </span><span>&quot;</span><span style="color:#a3be8c;">/bin/echo hello</span><span>&quot;
 </span></code></pre>
@@ -302,7 +307,7 @@ It’s soon going to be time to: </p>
 <li>learn about the Ansible Working With Playbooks language. Ansible is not just about running commands, it also has powerful configuration management and deployment features. </li>
 </ul>
 <p>There’s more to explore, but you already have a fully working infrastructure!</p>
-<h3 id="excercice">Excercice</h3>
+<h2 id="exercice">Exercice</h2>
 <p>Start multiple VMs and configure ansible to run <code>hostname</code> to all your VM with one command</p>
 
         
@@ -318,6 +323,29 @@ It’s soon going to be time to: </p>
     
     
       
+        
+        
+          
+        
+      
+        
+        
+          
+            
+              
+              <a href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;getting-started&#x2F;introduction&#x2F;">
+                <div class="card my-1">
+                  <div class="card-body py-2">
+                    &larr; Getting-started
+                  </div>
+                </div>
+              </a>
+            
+            
+            
+          
+        
+      
     
   
 
@@ -328,6 +356,11 @@ It’s soon going to be time to: </p>
   
     
     
+    
+      
+      
+        
+      
     
       
       

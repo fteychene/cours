@@ -1,27 +1,24 @@
 +++
 title = "Inventory"
 description = "Ansible - Inventory"
-date = 2021-05-01T08:00:00+00:00
+date = 2025-05-01T08:00:00+00:00
 updated = 2021-05-01T08:00:00+00:00
 draft = false
 sort_by = "weight"
-weight = 30
+weight = 430
 template = "docs/page.html"
 
 [extra]
-lead = "Ansible - Inventory"
 toc = true
 top = false
 +++
-
-## Inventory
 
 We already saw a basic invetory by adding our cutom VM in the inventory to work on it.
 Now we're gonna look at you to build more complex inventory.
 
 You can use multiple inventory files at the same time as described in Using multiple inventory sources, and/or pull inventory from dynamic or cloud sources or different formats (YAML, ini, and so on).
 
-### Inventory basics: formats, hosts, and groups
+## Inventory basics: formats, hosts, and groups
 
 The inventory file can be in one of many formats, depending on the inventory plugins you have. The most common formats are INI and YAML. A basic INI /etc/ansible/hosts might look like this:
 
@@ -58,11 +55,11 @@ all:
         three.example.com:
 ```
 
-#### Default groups
+### Default groups
 
 There are two default groups: all and ungrouped. The all group contains every host. The ungrouped group contains all hosts that don’t have another group aside from all. Every host will always belong to at least 2 groups (all and ungrouped or all and some other group). Though all and ungrouped are always present, they can be implicit and not appear in group listings like group_names.
 
-#### Hosts in multiple groups
+### Hosts in multiple groups
 
 You can (and probably will) put each host in more than one group. For example a production webserver in a datacenter in Atlanta might be included in groups called [prod] and [atlanta] and [webservers]. You can create groups that track:
  - What - An application, stack or microservice (for example, database servers, web servers, and so on).
@@ -139,11 +136,11 @@ all:
         west:
 ```
 
-### Adding variables to inventory
+## Adding variables to inventory
 
 You can store variable values that relate to a specific host or group in inventory. To start with, you may add variables directly to the hosts and groups in your main inventory file. As you add more and more managed nodes to your Ansible inventory, however, you will likely want to store variables in separate host and group variable files.
 
-#### Assigning a variable to one machine: host variables
+### Assigning a variable to one machine: host variables
 
 You can easily assign a variable to a single host, then use it later in playbooks. In INI:
 ```
@@ -176,7 +173,7 @@ other1.example.com     ansible_connection=ssh        ansible_user=myuser
 other2.example.com     ansible_connection=ssh        ansible_user=myotheruser
 ```
 
-#### Assigning a variable to many machines: group variables
+### Assigning a variable to many machines: group variables
 
 If all hosts in a group share a variable value, you can apply that variable to an entire group at once. In INI:
 ```
@@ -203,7 +200,7 @@ atlanta:
 Group variables are a convenient way to apply variables to multiple hosts at once. Before executing, however, Ansible always flattens variables, including inventory variables, to the host level. If a host is a member of multiple groups, Ansible reads variable values from all of those groups. If you assign different values to the same variable in different groups, Ansible chooses which value to use based on internal rules for merging.
 
 
-### Recap
+## Recap
 
 We have seen some basic inventory practices, there is more on this subject and you can look at the official documentation to go further.
 [Dynamic inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html) or [Using patterns for targeting](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html)

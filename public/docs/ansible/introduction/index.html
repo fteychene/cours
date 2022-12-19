@@ -182,12 +182,11 @@
 				
 				
 				
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Docs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://fteychene.github.io/learning-courses/blog/">Blog</a>
-				</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Courses</a>
+						</li>
+					
 				
 			</ul>
 			<div class="break order-6 d-md-none"></div>
@@ -215,6 +214,16 @@
 			
 			
 			
+					
+					
+					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/getting-started/introduction/">Getting-started</a></li>
+							
+					</ul>
+					
 					
 					
 					
@@ -246,11 +255,15 @@
   							
   							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#what-s-ansible">What&#x27;s Ansible</a></li>
   							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#installation">Installation</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#local-test-setup">Local test setup</a></li>
+  							
   									<ul>
   											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#installation">Installation</a></li>
-  											
-  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#local-test-setup">Local test setup</a></li>
+  											<li><a href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/#vagrant-vm">Vagrant VM</a></li>
   											
   									</ul>
   							
@@ -269,15 +282,15 @@
 <p>Ansible’s main goals are simplicity and ease-of-use. It also has a strong focus on security and reliability, featuring a minimum of moving parts, usage of OpenSSH for transport (with other transports and pull modes as alternatives), and a language that is designed around auditability by humans–even those not familiar with the program.</p>
 <p>It a widely used solution in the industry for various use cases, from environment's configuration to specific local installation for immutable infrastructure.</p>
 <p>Our goal in this codelab is to play with Ansible, try some basics features and let you explore the wide ansible ecosystem by yourself.</p>
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 <p>The instruction for installation can be found <a href="https://docs.ansible.com/ansible/2.5/installation_guide/intro_installation.html">here</a></p>
 <p>Check the pre-requisites and follow the installation instructions for your environment.</p>
 <aside class="negative">
 Since Ansible is a trool to manage remote machines it choose to use ssh connection to target machine.
 Ensure that you have ssh configuration well configured if you are on Windows environment.
 </aside>
-<h3 id="local-test-setup">Local test setup</h3>
-<h4 id="vagrant-vm">Vagrant VM</h4>
+<h2 id="local-test-setup">Local test setup</h2>
+<h3 id="vagrant-vm">Vagrant VM</h3>
 <p>Create a fresh VM with <code>vagrant</code> to use ansible on it with the following configuration</p>
 <pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#ebcb8b;">Vagrant</span><span>.configure(&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;) </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">config</span><span>|
 </span><span>  config.vm.box = &quot;</span><span style="color:#a3be8c;">ubuntu/focal64</span><span>&quot;
@@ -314,6 +327,29 @@ This configuration add your local machine ssh keys to the accepted configuration
     
     
       
+        
+        
+          
+        
+      
+        
+        
+          
+            
+              
+              <a href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;getting-started&#x2F;introduction&#x2F;">
+                <div class="card my-1">
+                  <div class="card-body py-2">
+                    &larr; Getting-started
+                  </div>
+                </div>
+              </a>
+            
+            
+            
+          
+        
+      
     
   
 
@@ -324,6 +360,11 @@ This configuration add your local machine ssh keys to the accepted configuration
   
     
     
+    
+      
+      
+        
+      
     
       
       

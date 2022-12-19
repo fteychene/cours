@@ -1,11 +1,11 @@
 +++
 title = "Ansible"
 description = "Introduction to Ansible"
-date = 2021-05-01T08:00:00+00:00
+date = 2025-05-01T08:00:00+00:00
 updated = 2021-05-01T08:00:00+00:00
 draft = false
 sort_by = "weight"
-weight = 10
+weight = 410
 template = "docs/page.html"
 
 [extra]
@@ -24,7 +24,7 @@ It a widely used solution in the industry for various use cases, from environmen
 
 Our goal in this codelab is to play with Ansible, try some basics features and let you explore the wide ansible ecosystem by yourself.
 
-### Installation
+## Installation
 
 The instruction for installation can be found [here](https://docs.ansible.com/ansible/2.5/installation_guide/intro_installation.html)  
 
@@ -36,9 +36,9 @@ Ensure that you have ssh configuration well configured if you are on Windows env
 </aside>
 
 
-### Local test setup
+## Local test setup
 
-#### Vagrant VM
+### Vagrant VM
 
 Create a fresh VM with `vagrant` to use ansible on it with the following configuration
 ```ruby

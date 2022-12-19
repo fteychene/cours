@@ -7,46 +7,11 @@
         <loc>https://fteychene.github.io/learning-courses/authors/</loc>
     </url>
     <url>
-        <loc>https://fteychene.github.io/learning-courses/authors/aaran-xu/</loc>
-    </url>
-    <url>
         <loc>https://fteychene.github.io/learning-courses/authors/fteychene/</loc>
         <lastmod>2021-04-01T08:50:45+00:00</lastmod>
     </url>
     <url>
-        <loc>https://fteychene.github.io/learning-courses/authors/public/</loc>
-    </url>
-    <url>
         <loc>https://fteychene.github.io/learning-courses/blog/</loc>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/hello-world/</loc>
-        <lastmod>2021-05-01T09:19:42+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/markdown-syntax/</loc>
-        <lastmod>2021-04-20T09:19:42+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/math-typesetting/</loc>
-        <lastmod>2021-04-08T09:19:42+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/page/2/</loc>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/page/3/</loc>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/placeholder-text/</loc>
-        <lastmod>2021-04-10T09:19:42+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/blog/say-hello-to-zola-doks/</loc>
-        <lastmod>2021-04-03T07:00:00+00:00</lastmod>
     </url>
     <url>
         <loc>https://fteychene.github.io/learning-courses/docs/</loc>
@@ -68,6 +33,13 @@
     </url>
     <url>
         <loc>https://fteychene.github.io/learning-courses/docs/ansible/playbooks/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/docs/getting-started/</loc>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/docs/getting-started/introduction/</loc>
         <lastmod>2021-05-01T08:00:00+00:00</lastmod>
     </url>
     <url>

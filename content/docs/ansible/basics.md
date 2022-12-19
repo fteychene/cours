@@ -1,23 +1,19 @@
 +++
 title = "Basic"
 description = "Ansible - Basics"
-date = 2021-05-01T08:00:00+00:00
+date = 2025-05-01T08:00:00+00:00
 updated = 2021-05-01T08:00:00+00:00
 draft = false
 sort_by = "weight"
-weight = 20
+weight = 420
 template = "docs/page.html"
 
 [extra]
-lead = "Ansible - Basics"
 toc = true
 top = false
 +++
 
-## Basics
-
-
-### Inventory
+## Welcome inventories
 
 Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory, which defaults to being saved in the location `/etc/ansible/hosts`. You can specify a different inventory file using the -i <path> option on the command line.
 
@@ -35,7 +31,7 @@ ansible all -u vagrant -m ping
 The `-u` option define the suer to connect with on the VM.  
 Th `-m` define the module to be executed on VMs from the all group
 
-### Connection user
+## Connection user
 
 If you would like to access sudo mode, there are also flags to do that:
 
@@ -50,7 +46,7 @@ $ ansible all -m ping -u bruce -b --become-user batman
 (The sudo implementation is changeable in Ansible’s configuration file if you happen to want to use a sudo replacement. Flags passed to sudo (like -H) can also be set there.)
 
 
-### Ad-hoc commands
+## Ad-hoc commands
 
 Now run a live command on all of your nodes:
 ```bash
@@ -66,6 +62,6 @@ It’s soon going to be time to:
 
 There’s more to explore, but you already have a fully working infrastructure!
 
-### Excercice
+## Exercice
 
 Start multiple VMs and configure ansible to run `hostname` to all your VM with one command
