@@ -2,17 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>fteychene-learning</title>
 	<subtitle>Courses and resources for learning for students</subtitle>
-	<link href="https://courses.fteychene.gihub.io/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://courses.fteychene.gihub.io"/>
+	<link href="https://fteychene.github.io/learning-courses/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fteychene.github.io/learning-courses/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
 	<updated>2021-05-01T09:19:42+00:00</updated>
-	<id>https://courses.fteychene.gihub.io/atom.xml</id>
+	<id>https://fteychene.github.io/learning-courses/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Hello World</title>
 		<published>2021-05-01T09:19:42+00:00</published>
 		<updated>2021-05-01T09:19:42+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/hello-world/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/blog/hello-world/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/blog/hello-world/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/blog/hello-world/</id>
 		<content type="html">&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; This is a comment, and is ignored by the compiler
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; This is the main function
@@ -37,8 +37,8 @@
 		<title>Basic</title>
 		<published>2021-05-01T08:00:00+00:00</published>
 		<updated>2021-05-01T08:00:00+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/basics/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/docs/ansible/basics/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/docs/ansible/basics/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/docs/ansible/basics/</id>
 		<content type="html">&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;inventory&quot;&gt;Inventory&lt;&#x2F;h3&gt;
 &lt;p&gt;Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory, which defaults to being saved in the location &lt;code&gt;&#x2F;etc&#x2F;ansible&#x2F;hosts&lt;&#x2F;code&gt;. You can specify a different inventory file using the -i &lt;path&gt; option on the command line.&lt;&#x2F;p&gt;
@@ -81,8 +81,8 @@ It’s soon going to be time to: &lt;&#x2F;p&gt;
 		<title>Ansible</title>
 		<published>2021-05-01T08:00:00+00:00</published>
 		<updated>2021-05-01T08:00:00+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/introduction/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/docs/ansible/introduction/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/docs/ansible/introduction/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/docs/ansible/introduction/</id>
 		<content type="html">&lt;h2 id=&quot;what-s-ansible&quot;&gt;What&#x27;s Ansible&lt;&#x2F;h2&gt;
 &lt;p&gt;Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.&lt;&#x2F;p&gt;
 &lt;p&gt;Ansible’s main goals are simplicity and ease-of-use. It also has a strong focus on security and reliability, featuring a minimum of moving parts, usage of OpenSSH for transport (with other transports and pull modes as alternatives), and a language that is designed around auditability by humans–even those not familiar with the program.&lt;&#x2F;p&gt;
@@ -125,8 +125,8 @@ This configuration add your local machine ssh keys to the accepted configuration
 		<title>Inventory</title>
 		<published>2021-05-01T08:00:00+00:00</published>
 		<updated>2021-05-01T08:00:00+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/inventory/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/docs/ansible/inventory/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/docs/ansible/inventory/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/docs/ansible/inventory/</id>
 		<content type="html">&lt;h2 id=&quot;inventory&quot;&gt;Inventory&lt;&#x2F;h2&gt;
 &lt;p&gt;We already saw a basic invetory by adding our cutom VM in the inventory to work on it.
 Now we&#x27;re gonna look at you to build more complex inventory.&lt;&#x2F;p&gt;
@@ -289,8 +289,8 @@ Now we&#x27;re gonna look at you to build more complex inventory.&lt;&#x2F;p&gt;
 		<title>Playbooks</title>
 		<published>2021-05-01T08:00:00+00:00</published>
 		<updated>2021-05-01T08:00:00+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/docs/ansible/playbooks/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/docs/ansible/playbooks/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/docs/ansible/playbooks/</id>
 		<content type="html">&lt;h2 id=&quot;intro-to-playbooks&quot;&gt;Intro to playbooks&lt;&#x2F;h2&gt;
 &lt;p&gt;Ansible Playbooks offer a repeatable, re-usable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, write a playbook and put it under source control. Then you can use the playbook to push out new configuration or confirm the configuration of remote systems. The playbooks in the ansible-examples repository illustrate many useful techniques. You may want to look at these in another tab as you read the documentation.&lt;&#x2F;p&gt;
 &lt;p&gt;Playbooks can:&lt;&#x2F;p&gt;
@@ -373,8 +373,8 @@ Now we&#x27;re gonna look at you to build more complex inventory.&lt;&#x2F;p&gt;
 		<title>Markdown Syntax Guide</title>
 		<published>2021-04-20T09:19:42+00:00</published>
 		<updated>2021-04-20T09:19:42+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/markdown-syntax/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/blog/markdown-syntax/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/blog/markdown-syntax/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/blog/markdown-syntax/</id>
 		<content type="html">&lt;h2 id=&quot;headings&quot;&gt;Headings&lt;&#x2F;h2&gt;
 &lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;&#x2F;code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;&#x2F;code&gt; elements represent six levels of section
 headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;&#x2F;code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;&#x2F;code&gt; is the lowest.&lt;&#x2F;p&gt;
@@ -503,8 +503,8 @@ during Gopherfest, November 18, 2015.&lt;&#x2F;p&gt;
 		<title>Placeholder Text</title>
 		<published>2021-04-10T09:19:42+00:00</published>
 		<updated>2021-04-10T09:19:42+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/placeholder-text/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/blog/placeholder-text/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/blog/placeholder-text/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/blog/placeholder-text/</id>
 		<content type="html">&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo. &lt;!--more--&gt;Redit
 teque digerit hominumque toris verebor lumina non cervice subde tollit usus
 habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus
@@ -553,8 +553,8 @@ Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt
 		<title>Math Typesetting</title>
 		<published>2021-04-08T09:19:42+00:00</published>
 		<updated>2021-04-08T09:19:42+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/math-typesetting/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/blog/math-typesetting/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/blog/math-typesetting/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/blog/math-typesetting/</id>
 		<content type="html">&lt;p&gt;In this example we will be using &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a macro under &lt;code&gt;&#x2F;template&#x2F;macros&#x2F;math.html&lt;&#x2F;code&gt; with a macro named &lt;code&gt;math&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
@@ -589,16 +589,16 @@ $$&lt;&#x2F;p&gt;
 		<title>Say hello to AdiDoks 👋</title>
 		<published>2021-04-03T07:00:00+00:00</published>
 		<updated>2021-04-03T07:00:00+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/say-hello-to-zola-doks/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/blog/say-hello-to-zola-doks/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/blog/say-hello-to-zola-doks/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/blog/say-hello-to-zola-doks/</id>
 		<content type="html"></content>
 	</entry>
 	<entry xml:lang="en">
 		<title>Francois Teychene</title>
 		<published>2021-04-01T08:50:45+00:00</published>
 		<updated>2021-04-01T08:50:45+00:00</updated>
-		<link rel="alternate" href="https://courses.fteychene.gihub.io/authors/fteychene/" type="text/html"/>
-		<id>https://courses.fteychene.gihub.io/authors/fteychene/</id>
+		<link rel="alternate" href="https://fteychene.github.io/learning-courses/authors/fteychene/" type="text/html"/>
+		<id>https://fteychene.github.io/learning-courses/authors/fteychene/</id>
 		<content type="html">&lt;p&gt;Hey 👋&lt;br &#x2F;&gt;
 I&#x27;m the original creator of site for my courses. If there is someone else someday it would not have been prepared.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fteychene&quot;&gt;@fteychene&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;

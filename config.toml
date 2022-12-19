@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://courses.fteychene.gihub.io"
+base_url = "https://fteychene.github.io/learning-courses/"
 theme = "adidoks"
 title = "fteychene-learning"
 description = "Courses and resources for learning for students"

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://courses.fteychene.gihub.io/sitemap.xml
+Sitemap: https://fteychene.github.io/learning-courses//sitemap.xml
