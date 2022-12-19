@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" as="font" href="https://courses.fteychene.gihub.io/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://courses.fteychene.gihub.io/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://courses.fteychene.gihub.io/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Playbooks | fteychene-learning</title>
+<meta name="description" content="Introduction to Ansible">
+<link rel="canonical" href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/">
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://courses.fteychene.gihub.io/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://courses.fteychene.gihub.io/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Ansible",
+            "item": "https://courses.fteychene.gihub.io/docs/ansible/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Playbooks",
+            "item": "https://courses.fteychene.gihub.io/docs/ansible/playbooks/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://courses.fteychene.gihub.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://courses.fteychene.gihub.io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://courses.fteychene.gihub.io/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://courses.fteychene.gihub.io/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://courses.fteychene.gihub.io">fteychene-learning</a>
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				<li class="nav-item">
+					<a class="nav-link" href="https://twitter.com/aaranxu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/aaranxu/adidoks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+				</li>
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+				<li class="nav-item">
+					<a class="nav-link" href="https://courses.fteychene.gihub.io/docs/">Docs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://courses.fteychene.gihub.io/blog/">Blog</a>
+				</li>
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-md-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Ansible</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://courses.fteychene.gihub.io/docs/ansible/introduction/">Ansible</a></li>
+							                           
+									<li><a class="docs-link" href="https://courses.fteychene.gihub.io/docs/ansible/basics/">Basic</a></li>
+							                           
+									<li><a class="docs-link" href="https://courses.fteychene.gihub.io/docs/ansible/inventory/">Inventory</a></li>
+							                           
+									<li><a class="docs-link active" href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/">Playbooks</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#intro-to-playbooks">Intro to playbooks</a></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#playbook-syntax">Playbook syntax</a></li>
+  											
+  											<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#playbook-execution">Playbook execution</a></li>
+  											
+  											<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#ansible-pull">Ansible-Pull</a></li>
+  											
+  											<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#verifying-playbooks">Verifying playbooks</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><a href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/#exercice">Exercice</a></li>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Playbooks</h1>
+        <p class="lead">Introduction to Ansible</p>
+        <h2 id="intro-to-playbooks">Intro to playbooks</h2>
+<p>Ansible Playbooks offer a repeatable, re-usable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, write a playbook and put it under source control. Then you can use the playbook to push out new configuration or confirm the configuration of remote systems. The playbooks in the ansible-examples repository illustrate many useful techniques. You may want to look at these in another tab as you read the documentation.</p>
+<p>Playbooks can:</p>
+<ul>
+<li>declare configurations</li>
+<li>orchestrate steps of any manual ordered process, on multiple sets of machines, in a defined order</li>
+<li>launch tasks synchronously or asynchronously</li>
+</ul>
+<h3 id="playbook-syntax">Playbook syntax</h3>
+<p>Playbooks are expressed in YAML format with a minimum of syntax. If you are not familiar with YAML, look at our overview of YAML Syntax and consider installing an add-on for your text editor (see Other Tools and Programs) to help you write clean YAML syntax in your playbooks.</p>
+<p>A playbook is composed of one or more ‘plays’ in an ordered list. The terms ‘playbook’ and ‘play’ are sports analogies. Each play executes part of the overall goal of the playbook, running one or more tasks. Each task calls an Ansible module.</p>
+<h3 id="playbook-execution">Playbook execution</h3>
+<p>A playbook runs in order from top to bottom. Within each play, tasks also run in order from top to bottom. Playbooks with multiple ‘plays’ can orchestrate multi-machine deployments, running one play on your webservers, then another play on your database servers, then a third play on your network infrastructure, and so on. At a minimum, each play defines two things:</p>
+<ul>
+<li>the managed nodes to target, using a pattern</li>
+<li>at least one task to execute</li>
+</ul>
+<p>In this example, the first play targets the web servers; the second play targets the database servers.</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>---
+</span><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Update web servers
+</span><span>  </span><span style="color:#bf616a;">hosts</span><span>: </span><span style="color:#a3be8c;">webservers
+</span><span>  </span><span style="color:#bf616a;">remote_user</span><span>: </span><span style="color:#a3be8c;">root
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">tasks</span><span>:
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Ensure apache is at the latest version
+</span><span>    </span><span style="color:#bf616a;">ansible.builtin.yum</span><span>:
+</span><span>      </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">httpd
+</span><span>      </span><span style="color:#bf616a;">state</span><span>: </span><span style="color:#a3be8c;">latest
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Write the apache config file
+</span><span>    </span><span style="color:#bf616a;">ansible.builtin.template</span><span>:
+</span><span>      </span><span style="color:#bf616a;">src</span><span>: </span><span style="color:#a3be8c;">/srv/httpd.j2
+</span><span>      </span><span style="color:#bf616a;">dest</span><span>: </span><span style="color:#a3be8c;">/etc/httpd.conf
+</span><span>
+</span><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Update db servers
+</span><span>  </span><span style="color:#bf616a;">hosts</span><span>: </span><span style="color:#a3be8c;">databases
+</span><span>  </span><span style="color:#bf616a;">remote_user</span><span>: </span><span style="color:#a3be8c;">root
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">tasks</span><span>:
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Ensure postgresql is at the latest version
+</span><span>    </span><span style="color:#bf616a;">ansible.builtin.yum</span><span>:
+</span><span>      </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">postgresql
+</span><span>      </span><span style="color:#bf616a;">state</span><span>: </span><span style="color:#a3be8c;">latest
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Ensure that postgresql is started
+</span><span>    </span><span style="color:#bf616a;">ansible.builtin.service</span><span>:
+</span><span>      </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">postgresql
+</span><span>      </span><span style="color:#bf616a;">state</span><span>: </span><span style="color:#a3be8c;">started
+</span></code></pre>
+<p>Your playbook can include more than just a hosts line and tasks. For example, the playbook above sets a remote_user for each play. This is the user account for the SSH connection. You can add other Playbook Keywords at the playbook, play, or task level to influence how Ansible behaves. Playbook keywords can control the connection plugin, whether to use privilege escalation, how to handle errors, and more. To support a variety of environments, Ansible lets you set many of these parameters as command-line flags, in your Ansible configuration, or in your inventory. Learning the precedence rules for these sources of data will help you as you expand your Ansible ecosystem.</p>
+<h4 id="task-execution">Task execution</h4>
+<p>By default, Ansible executes each task in order, one at a time, against all machines matched by the host pattern. Each task executes a module with specific arguments. When a task has executed on all target machines, Ansible moves on to the next task. You can use strategies to change this default behavior. Within each play, Ansible applies the same task directives to all hosts. If a task fails on a host, Ansible takes that host out of the rotation for the rest of the playbook.</p>
+<p>When you run a playbook, Ansible returns information about connections, the <code>name</code> lines of all your plays and tasks, whether each task has succeeded or failed on each machine, and whether each task has made a change on each machine. At the bottom of the playbook execution, Ansible provides a summary of the nodes that were targeted and how they performed. General failures and fatal “unreachable” communication attempts are kept separate in the counts.</p>
+<h4 id="desired-state-and-idempotency">Desired state and ‘idempotency’</h4>
+<p>Most Ansible modules check whether the desired final state has already been achieved, and exit without performing any actions if that state has been achieved, so that repeating the task does not change the final state. Modules that behave this way are often called ‘idempotent.’ Whether you run a playbook once, or multiple times, the outcome should be the same. However, not all playbooks and not all modules behave this way. If you are unsure, test your playbooks in a sandbox environment before running them multiple times in production.</p>
+<h4 id="running-playbooks">Running playbooks</h4>
+<p>To run your playbook, use the <a href="https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html#ansible-playbook">ansible-playbook</a> command.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ansible-playbook</span><span> playbook.yml</span><span style="color:#bf616a;"> -f</span><span> 10
+</span></code></pre>
+<p>Use the <code>--verbose</code> flag when running your playbook to see detailed output from successful modules as well as unsuccessful ones.</p>
+<h3 id="ansible-pull">Ansible-Pull</h3>
+<p>Should you want to invert the architecture of Ansible, so that nodes check in to a central location, instead of pushing configuration out to them, you can.</p>
+<p>The <code>ansible-pull</code> is a small script that will checkout a repo of configuration instructions from git, and then run <code>ansible-playbook</code> against that content.</p>
+<p>Assuming you load balance your checkout location, <code>ansible-pull</code> scales essentially infinitely.</p>
+<p>Run <code>ansible-pull --help</code> for details.</p>
+<p>There’s also a clever playbook available to configure <code>ansible-pull</code> via a crontab from push mode.</p>
+<h3 id="verifying-playbooks">Verifying playbooks</h3>
+<p>You may want to verify your playbooks to catch syntax errors and other problems before you run them. The ansible-playbook command offers several options for verification, including <code>--check</code>, <code>--diff</code>, <code>--list-hosts</code>, <code>--list-tasks</code>, and <code>--syntax-check</code>.</p>
+<h4 id="ansible-lint"><code>ansible-lint</code></h4>
+<p>You can use <code>ansible-lint</code> for detailed, Ansible-specific feedback on your playbooks before you execute them. For example, if you run ansible-lint on the playbook called verify-apache.yml near the top of this page, you should get the following results:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> ansible-lint verify-apache.yml
+</span><span style="color:#bf616a;">[403]</span><span> Package installs should not use latest
+</span><span style="color:#bf616a;">verify-apache.yml:8
+</span><span style="color:#bf616a;">Task/Handler:</span><span> ensure apache is at the latest version
+</span></code></pre>
+<p>The <a href="https://docs.ansible.com/ansible-lint/rules/default_rules.html">ansible-lint default rules page</a> describes each error. For <code>[403]</code>, the recommended fix is to change <code>state: latest</code> to <code>state: present</code> in the playbook.</p>
+<h2 id="exercice">Exercice</h2>
+<p>Create a playbook to create a new user and install a <code>nginx</code> server and use it on a VM.</p>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item">Powered by <a href="https://github.com/">Github</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://courses.fteychene.gihub.io/js/main.js" defer></script>
+
+  <script type="text/javascript" src="https://courses.fteychene.gihub.io/plugins/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://courses.fteychene.gihub.io/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://courses.fteychene.gihub.io/js/search.js" defer></script>
+
+  
+</body>
+</html>

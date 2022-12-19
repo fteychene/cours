@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>fteychene-learning</title>
+	<subtitle>Courses and resources for learning for students</subtitle>
+	<link href="https://courses.fteychene.gihub.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://courses.fteychene.gihub.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-05-01T09:19:42+00:00</updated>
+	<id>https://courses.fteychene.gihub.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Hello World</title>
+		<published>2021-05-01T09:19:42+00:00</published>
+		<updated>2021-05-01T09:19:42+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/hello-world/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/blog/hello-world/</id>
+		<content type="html">&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; This is a comment, and is ignored by the compiler
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; This is the main function
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Statements here are executed when the compiled binary is called
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Print text to the console
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Hello World!&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;println!&lt;&#x2F;code&gt; is a macro that prints text to the console.&lt;&#x2F;p&gt;
+&lt;p&gt;A binary can be generated using the Rust compiler: &lt;code&gt;rustc&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; rustc hello.rs
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;rustc&lt;&#x2F;code&gt; will produce a &lt;code&gt;hello&lt;&#x2F;code&gt; binary that can be executed.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;hello
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Hello&lt;&#x2F;span&gt;&lt;span&gt; World!
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Basic</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/basics/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/docs/ansible/basics/</id>
+		<content type="html">&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;inventory&quot;&gt;Inventory&lt;&#x2F;h3&gt;
+&lt;p&gt;Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory, which defaults to being saved in the location &lt;code&gt;&#x2F;etc&#x2F;ansible&#x2F;hosts&lt;&#x2F;code&gt;. You can specify a different inventory file using the -i &lt;path&gt; option on the command line.&lt;&#x2F;p&gt;
+&lt;p&gt;To work on your new configured VM, add it&#x27;s ip to the ansible inventory file &lt;code&gt;&#x2F;etc&#x2F;ansible&#x2F;hosts&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span&gt; 192.168.0.2 &amp;gt;&amp;gt; &#x2F;etc&#x2F;ansible&#x2F;hosts
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;By doing this you add your VM to the global inventory of ansible in the all group (if you don&#x27;t have already some groupe configured in this file ...).&lt;&#x2F;p&gt;
+&lt;p&gt;You can test the connection to your VM with the ansible command, using the &lt;code&gt;ping&lt;&#x2F;code&gt; module.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible&lt;&#x2F;span&gt;&lt;span&gt; all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; vagrant&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; ping 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;-u&lt;&#x2F;code&gt; option define the suer to connect with on the VM.&lt;br &#x2F;&gt;
+Th &lt;code&gt;-m&lt;&#x2F;code&gt; define the module to be executed on VMs from the all group&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;connection-user&quot;&gt;Connection user&lt;&#x2F;h3&gt;
+&lt;p&gt;If you would like to access sudo mode, there are also flags to do that:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# as bruce
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; ansible all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; ping&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; bruce
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# as bruce, sudoing to root
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; ansible all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; ping&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; bruce&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -b
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# as bruce, sudoing to batman
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; ansible all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; ping&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; bruce&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -b --become-user&lt;&#x2F;span&gt;&lt;span&gt; batman
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(The sudo implementation is changeable in Ansible’s configuration file if you happen to want to use a sudo replacement. Flags passed to sudo (like -H) can also be set there.)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ad-hoc-commands&quot;&gt;Ad-hoc commands&lt;&#x2F;h3&gt;
+&lt;p&gt;Now run a live command on all of your nodes:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; ansible all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; vagrant&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -a &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;bin&#x2F;echo hello&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Congratulations! You’ve just contacted your nodes with Ansible.&lt;br &#x2F;&gt;
+It’s soon going to be time to: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;read about some more real-world cases in Introduction To Ad-Hoc Commands&lt;&#x2F;li&gt;
+&lt;li&gt;explore what you can do with different modules&lt;&#x2F;li&gt;
+&lt;li&gt;learn about the Ansible Working With Playbooks language. Ansible is not just about running commands, it also has powerful configuration management and deployment features. &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There’s more to explore, but you already have a fully working infrastructure!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;excercice&quot;&gt;Excercice&lt;&#x2F;h3&gt;
+&lt;p&gt;Start multiple VMs and configure ansible to run &lt;code&gt;hostname&lt;&#x2F;code&gt; to all your VM with one command&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Ansible</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/introduction/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/docs/ansible/introduction/</id>
+		<content type="html">&lt;h2 id=&quot;what-s-ansible&quot;&gt;What&#x27;s Ansible&lt;&#x2F;h2&gt;
+&lt;p&gt;Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.&lt;&#x2F;p&gt;
+&lt;p&gt;Ansible’s main goals are simplicity and ease-of-use. It also has a strong focus on security and reliability, featuring a minimum of moving parts, usage of OpenSSH for transport (with other transports and pull modes as alternatives), and a language that is designed around auditability by humans–even those not familiar with the program.&lt;&#x2F;p&gt;
+&lt;p&gt;It a widely used solution in the industry for various use cases, from environment&#x27;s configuration to specific local installation for immutable infrastructure.&lt;&#x2F;p&gt;
+&lt;p&gt;Our goal in this codelab is to play with Ansible, try some basics features and let you explore the wide ansible ecosystem by yourself.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h3&gt;
+&lt;p&gt;The instruction for installation can be found &lt;a href=&quot;https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;2.5&#x2F;installation_guide&#x2F;intro_installation.html&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Check the pre-requisites and follow the installation instructions for your environment.&lt;&#x2F;p&gt;
+&lt;aside class=&quot;negative&quot;&gt;
+Since Ansible is a trool to manage remote machines it choose to use ssh connection to target machine.
+Ensure that you have ssh configuration well configured if you are on Windows environment.
+&lt;&#x2F;aside&gt;
+&lt;h3 id=&quot;local-test-setup&quot;&gt;Local test setup&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;vagrant-vm&quot;&gt;Vagrant VM&lt;&#x2F;h4&gt;
+&lt;p&gt;Create a fresh VM with &lt;code&gt;vagrant&lt;&#x2F;code&gt; to use ansible on it with the following configuration&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ruby&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ruby &quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Vagrant&lt;&#x2F;span&gt;&lt;span&gt;.configure(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span&gt;|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;config&lt;&#x2F;span&gt;&lt;span&gt;|
+&lt;&#x2F;span&gt;&lt;span&gt;  config.vm.box = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ubuntu&#x2F;focal64&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  config.vm.network &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:private_network&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ip: &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;192.168.0.2&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  config.ssh.forward_agent    = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;  config.ssh.insert_key       = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;span&gt;  config.ssh.private_key_path =  [&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;~&#x2F;.vagrant.d&#x2F;insecure_private_key&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;~&#x2F;.ssh&#x2F;id_rsa&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;  config.vm.provision &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:shell&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;privileged: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span&gt;|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span&gt;|
+&lt;&#x2F;span&gt;&lt;span&gt;    ssh_pub_key = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;File&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;readlines&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;#{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Dir&lt;&#x2F;span&gt;&lt;span&gt;.home}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;.ssh&#x2F;id_rsa.pub&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;).first.strip
+&lt;&#x2F;span&gt;&lt;span&gt;    s.inline = &amp;lt;&amp;lt;-SHELL
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#{ssh_pub_key} &amp;gt;&amp;gt; &#x2F;home&#x2F;$USER&#x2F;.ssh&#x2F;authorized_keys
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; bash&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -c &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;echo #{ssh_pub_key} &amp;gt;&amp;gt; &#x2F;root&#x2F;.ssh&#x2F;authorized_keys&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt-get update
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt-get install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -y&lt;&#x2F;span&gt;&lt;span&gt; python
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SHELL
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ansible use ssh to connect to target VM and execute command on machines.&lt;br &#x2F;&gt;
+This configuration add your local machine ssh keys to the accepted configuration of the custom VM.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Inventory</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/inventory/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/docs/ansible/inventory/</id>
+		<content type="html">&lt;h2 id=&quot;inventory&quot;&gt;Inventory&lt;&#x2F;h2&gt;
+&lt;p&gt;We already saw a basic invetory by adding our cutom VM in the inventory to work on it.
+Now we&#x27;re gonna look at you to build more complex inventory.&lt;&#x2F;p&gt;
+&lt;p&gt;You can use multiple inventory files at the same time as described in Using multiple inventory sources, and&#x2F;or pull inventory from dynamic or cloud sources or different formats (YAML, ini, and so on).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;inventory-basics-formats-hosts-and-groups&quot;&gt;Inventory basics: formats, hosts, and groups&lt;&#x2F;h3&gt;
+&lt;p&gt;The inventory file can be in one of many formats, depending on the inventory plugins you have. The most common formats are INI and YAML. A basic INI &#x2F;etc&#x2F;ansible&#x2F;hosts might look like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;mail.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[webservers]
+&lt;&#x2F;span&gt;&lt;span&gt;foo.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;bar.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[dbservers]
+&lt;&#x2F;span&gt;&lt;span&gt;one.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;two.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;three.example.com
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The headings in brackets are group names, which are used in classifying hosts and deciding what hosts you are controlling at what times and for what purpose. Group names should follow the same guidelines as Creating valid variable names.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s that same basic inventory file in YAML format:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;all&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mail.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;webservers&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bar.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dbservers&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;one.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;two.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;three.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-groups&quot;&gt;Default groups&lt;&#x2F;h4&gt;
+&lt;p&gt;There are two default groups: all and ungrouped. The all group contains every host. The ungrouped group contains all hosts that don’t have another group aside from all. Every host will always belong to at least 2 groups (all and ungrouped or all and some other group). Though all and ungrouped are always present, they can be implicit and not appear in group listings like group_names.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;hosts-in-multiple-groups&quot;&gt;Hosts in multiple groups&lt;&#x2F;h4&gt;
+&lt;p&gt;You can (and probably will) put each host in more than one group. For example a production webserver in a datacenter in Atlanta might be included in groups called [prod] and [atlanta] and [webservers]. You can create groups that track:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;What - An application, stack or microservice (for example, database servers, web servers, and so on).&lt;&#x2F;li&gt;
+&lt;li&gt;Where - A datacenter or region, to talk to local DNS, storage, and so on (for example, east, west).&lt;&#x2F;li&gt;
+&lt;li&gt;When - The development stage, to avoid testing on production resources (for example, prod, test).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Extending the previous YAML inventory to include what, when, and where would look like:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;all:
+&lt;&#x2F;span&gt;&lt;span&gt;  hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;    mail.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;  children:
+&lt;&#x2F;span&gt;&lt;span&gt;    webservers:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        foo.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        bar.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;    dbservers:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        one.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        two.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        three.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;    east:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        foo.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        one.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        two.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;    west:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        bar.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        three.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;    prod:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        foo.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        one.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        two.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;    test:
+&lt;&#x2F;span&gt;&lt;span&gt;      hosts:
+&lt;&#x2F;span&gt;&lt;span&gt;        bar.example.com:
+&lt;&#x2F;span&gt;&lt;span&gt;        three.example.com:
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can see that one.example.com exists in the dbservers, east, and prod groups.&lt;&#x2F;p&gt;
+&lt;p&gt;You can also use nested groups to simplify prod and test in this inventory, for the same result:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;all&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mail.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;webservers&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bar.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dbservers&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;one.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;two.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;three.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;east&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;one.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;two.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;west&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bar.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;three.example.com&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;prod&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;east&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;test&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;west&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;adding-variables-to-inventory&quot;&gt;Adding variables to inventory&lt;&#x2F;h3&gt;
+&lt;p&gt;You can store variable values that relate to a specific host or group in inventory. To start with, you may add variables directly to the hosts and groups in your main inventory file. As you add more and more managed nodes to your Ansible inventory, however, you will likely want to store variables in separate host and group variable files.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;assigning-a-variable-to-one-machine-host-variables&quot;&gt;Assigning a variable to one machine: host variables&lt;&#x2F;h4&gt;
+&lt;p&gt;You can easily assign a variable to a single host, then use it later in playbooks. In INI:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[atlanta]
+&lt;&#x2F;span&gt;&lt;span&gt;host1 http_port=80 maxRequestsPerChild=808
+&lt;&#x2F;span&gt;&lt;span&gt;host2 http_port=303 maxRequestsPerChild=909
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In YAML:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;atlanta&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;host1&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;http_port&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;80
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;maxRequestsPerChild&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;808
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;host2&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;http_port&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;303
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;maxRequestsPerChild&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;909
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Unique values like non-standard SSH ports work well as host variables. You can add them to your Ansible inventory by adding the port number after the hostname with a colon:
+&lt;code&gt;badwolf.example.com:5309&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Connection variables also work well as host variables:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[targets]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;localhost              ansible_connection=local
+&lt;&#x2F;span&gt;&lt;span&gt;other1.example.com     ansible_connection=ssh        ansible_user=myuser
+&lt;&#x2F;span&gt;&lt;span&gt;other2.example.com     ansible_connection=ssh        ansible_user=myotheruser
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;assigning-a-variable-to-many-machines-group-variables&quot;&gt;Assigning a variable to many machines: group variables&lt;&#x2F;h4&gt;
+&lt;p&gt;If all hosts in a group share a variable value, you can apply that variable to an entire group at once. In INI:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[atlanta]
+&lt;&#x2F;span&gt;&lt;span&gt;host1
+&lt;&#x2F;span&gt;&lt;span&gt;host2
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[atlanta:vars]
+&lt;&#x2F;span&gt;&lt;span&gt;ntp_server=ntp.atlanta.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;proxy=proxy.atlanta.example.com
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In YAML:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;atlanta&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;host1&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;host2&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;vars&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ntp_server&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ntp.atlanta.example.com
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;proxy&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;proxy.atlanta.example.com
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Group variables are a convenient way to apply variables to multiple hosts at once. Before executing, however, Ansible always flattens variables, including inventory variables, to the host level. If a host is a member of multiple groups, Ansible reads variable values from all of those groups. If you assign different values to the same variable in different groups, Ansible chooses which value to use based on internal rules for merging.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;recap&quot;&gt;Recap&lt;&#x2F;h3&gt;
+&lt;p&gt;We have seen some basic inventory practices, there is more on this subject and you can look at the official documentation to go further.
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;latest&#x2F;user_guide&#x2F;intro_dynamic_inventory.html&quot;&gt;Dynamic inventory&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;latest&#x2F;user_guide&#x2F;intro_patterns.html&quot;&gt;Using patterns for targeting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Playbooks</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/docs/ansible/playbooks/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/docs/ansible/playbooks/</id>
+		<content type="html">&lt;h2 id=&quot;intro-to-playbooks&quot;&gt;Intro to playbooks&lt;&#x2F;h2&gt;
+&lt;p&gt;Ansible Playbooks offer a repeatable, re-usable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, write a playbook and put it under source control. Then you can use the playbook to push out new configuration or confirm the configuration of remote systems. The playbooks in the ansible-examples repository illustrate many useful techniques. You may want to look at these in another tab as you read the documentation.&lt;&#x2F;p&gt;
+&lt;p&gt;Playbooks can:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;declare configurations&lt;&#x2F;li&gt;
+&lt;li&gt;orchestrate steps of any manual ordered process, on multiple sets of machines, in a defined order&lt;&#x2F;li&gt;
+&lt;li&gt;launch tasks synchronously or asynchronously&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;playbook-syntax&quot;&gt;Playbook syntax&lt;&#x2F;h3&gt;
+&lt;p&gt;Playbooks are expressed in YAML format with a minimum of syntax. If you are not familiar with YAML, look at our overview of YAML Syntax and consider installing an add-on for your text editor (see Other Tools and Programs) to help you write clean YAML syntax in your playbooks.&lt;&#x2F;p&gt;
+&lt;p&gt;A playbook is composed of one or more ‘plays’ in an ordered list. The terms ‘playbook’ and ‘play’ are sports analogies. Each play executes part of the overall goal of the playbook, running one or more tasks. Each task calls an Ansible module.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;playbook-execution&quot;&gt;Playbook execution&lt;&#x2F;h3&gt;
+&lt;p&gt;A playbook runs in order from top to bottom. Within each play, tasks also run in order from top to bottom. Playbooks with multiple ‘plays’ can orchestrate multi-machine deployments, running one play on your webservers, then another play on your database servers, then a third play on your network infrastructure, and so on. At a minimum, each play defines two things:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;the managed nodes to target, using a pattern&lt;&#x2F;li&gt;
+&lt;li&gt;at least one task to execute&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this example, the first play targets the web servers; the second play targets the database servers.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Update web servers
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;webservers
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;remote_user&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;root
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tasks&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Ensure apache is at the latest version
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible.builtin.yum&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;httpd
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;state&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;latest
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Write the apache config file
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible.builtin.template&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;srv&#x2F;httpd.j2
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dest&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;etc&#x2F;httpd.conf
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Update db servers
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hosts&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;databases
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;remote_user&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;root
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tasks&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Ensure postgresql is at the latest version
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible.builtin.yum&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;postgresql
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;state&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;latest
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Ensure that postgresql is started
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible.builtin.service&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;postgresql
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;state&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;started
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Your playbook can include more than just a hosts line and tasks. For example, the playbook above sets a remote_user for each play. This is the user account for the SSH connection. You can add other Playbook Keywords at the playbook, play, or task level to influence how Ansible behaves. Playbook keywords can control the connection plugin, whether to use privilege escalation, how to handle errors, and more. To support a variety of environments, Ansible lets you set many of these parameters as command-line flags, in your Ansible configuration, or in your inventory. Learning the precedence rules for these sources of data will help you as you expand your Ansible ecosystem.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;task-execution&quot;&gt;Task execution&lt;&#x2F;h4&gt;
+&lt;p&gt;By default, Ansible executes each task in order, one at a time, against all machines matched by the host pattern. Each task executes a module with specific arguments. When a task has executed on all target machines, Ansible moves on to the next task. You can use strategies to change this default behavior. Within each play, Ansible applies the same task directives to all hosts. If a task fails on a host, Ansible takes that host out of the rotation for the rest of the playbook.&lt;&#x2F;p&gt;
+&lt;p&gt;When you run a playbook, Ansible returns information about connections, the &lt;code&gt;name&lt;&#x2F;code&gt; lines of all your plays and tasks, whether each task has succeeded or failed on each machine, and whether each task has made a change on each machine. At the bottom of the playbook execution, Ansible provides a summary of the nodes that were targeted and how they performed. General failures and fatal “unreachable” communication attempts are kept separate in the counts.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;desired-state-and-idempotency&quot;&gt;Desired state and ‘idempotency’&lt;&#x2F;h4&gt;
+&lt;p&gt;Most Ansible modules check whether the desired final state has already been achieved, and exit without performing any actions if that state has been achieved, so that repeating the task does not change the final state. Modules that behave this way are often called ‘idempotent.’ Whether you run a playbook once, or multiple times, the outcome should be the same. However, not all playbooks and not all modules behave this way. If you are unsure, test your playbooks in a sandbox environment before running them multiple times in production.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;running-playbooks&quot;&gt;Running playbooks&lt;&#x2F;h4&gt;
+&lt;p&gt;To run your playbook, use the &lt;a href=&quot;https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;latest&#x2F;cli&#x2F;ansible-playbook.html#ansible-playbook&quot;&gt;ansible-playbook&lt;&#x2F;a&gt; command.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ansible-playbook&lt;&#x2F;span&gt;&lt;span&gt; playbook.yml&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;span&gt; 10
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Use the &lt;code&gt;--verbose&lt;&#x2F;code&gt; flag when running your playbook to see detailed output from successful modules as well as unsuccessful ones.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ansible-pull&quot;&gt;Ansible-Pull&lt;&#x2F;h3&gt;
+&lt;p&gt;Should you want to invert the architecture of Ansible, so that nodes check in to a central location, instead of pushing configuration out to them, you can.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;ansible-pull&lt;&#x2F;code&gt; is a small script that will checkout a repo of configuration instructions from git, and then run &lt;code&gt;ansible-playbook&lt;&#x2F;code&gt; against that content.&lt;&#x2F;p&gt;
+&lt;p&gt;Assuming you load balance your checkout location, &lt;code&gt;ansible-pull&lt;&#x2F;code&gt; scales essentially infinitely.&lt;&#x2F;p&gt;
+&lt;p&gt;Run &lt;code&gt;ansible-pull --help&lt;&#x2F;code&gt; for details.&lt;&#x2F;p&gt;
+&lt;p&gt;There’s also a clever playbook available to configure &lt;code&gt;ansible-pull&lt;&#x2F;code&gt; via a crontab from push mode.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;verifying-playbooks&quot;&gt;Verifying playbooks&lt;&#x2F;h3&gt;
+&lt;p&gt;You may want to verify your playbooks to catch syntax errors and other problems before you run them. The ansible-playbook command offers several options for verification, including &lt;code&gt;--check&lt;&#x2F;code&gt;, &lt;code&gt;--diff&lt;&#x2F;code&gt;, &lt;code&gt;--list-hosts&lt;&#x2F;code&gt;, &lt;code&gt;--list-tasks&lt;&#x2F;code&gt;, and &lt;code&gt;--syntax-check&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;ansible-lint&quot;&gt;&lt;code&gt;ansible-lint&lt;&#x2F;code&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;You can use &lt;code&gt;ansible-lint&lt;&#x2F;code&gt; for detailed, Ansible-specific feedback on your playbooks before you execute them. For example, if you run ansible-lint on the playbook called verify-apache.yml near the top of this page, you should get the following results:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; ansible-lint verify-apache.yml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;[403]&lt;&#x2F;span&gt;&lt;span&gt; Package installs should not use latest
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;verify-apache.yml:8
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Task&#x2F;Handler:&lt;&#x2F;span&gt;&lt;span&gt; ensure apache is at the latest version
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible-lint&#x2F;rules&#x2F;default_rules.html&quot;&gt;ansible-lint default rules page&lt;&#x2F;a&gt; describes each error. For &lt;code&gt;[403]&lt;&#x2F;code&gt;, the recommended fix is to change &lt;code&gt;state: latest&lt;&#x2F;code&gt; to &lt;code&gt;state: present&lt;&#x2F;code&gt; in the playbook.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;exercice&quot;&gt;Exercice&lt;&#x2F;h2&gt;
+&lt;p&gt;Create a playbook to create a new user and install a &lt;code&gt;nginx&lt;&#x2F;code&gt; server and use it on a VM.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Markdown Syntax Guide</title>
+		<published>2021-04-20T09:19:42+00:00</published>
+		<updated>2021-04-20T09:19:42+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/markdown-syntax/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/blog/markdown-syntax/</id>
+		<content type="html">&lt;h2 id=&quot;headings&quot;&gt;Headings&lt;&#x2F;h2&gt;
+&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;&#x2F;code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;&#x2F;code&gt; elements represent six levels of section
+headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;&#x2F;code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;&#x2F;code&gt; is the lowest.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;h1&quot;&gt;H1&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;h2&quot;&gt;H2&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;h3&quot;&gt;H3&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;h4&quot;&gt;H4&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;h5&quot;&gt;H5&lt;&#x2F;h5&gt;
+&lt;h6 id=&quot;h6&quot;&gt;H6&lt;&#x2F;h6&gt;
+&lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;&#x2F;h2&gt;
+&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum,
+voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma
+dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as
+cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin
+porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur?
+Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit
+ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda
+veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore
+eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata
+tiustia prat.&lt;&#x2F;p&gt;
+&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne
+sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;&#x2F;h2&gt;
+&lt;p&gt;The blockquote element represents content that is quoted from another source,
+optionally with a citation which must be within a &lt;code&gt;footer&lt;&#x2F;code&gt; or &lt;code&gt;cite&lt;&#x2F;code&gt; element,
+and optionally with in-line changes such as annotations and abbreviations.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;blockquote-without-attribution&quot;&gt;Blockquote without attribution&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong&gt;Note&lt;&#x2F;strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;&#x2F;em&gt; within a blockquote.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;blockquote-with-attribution&quot;&gt;Blockquote with attribution&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&#x27;t communicate by sharing memory, share memory by communicating.&lt;br&gt;
+— &lt;cite&gt;Rob Pike&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;cite&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All men by nature desire to know.&lt;br&gt;
+― &lt;cite&gt;Aristotle&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;cite&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;&#x2F;h2&gt;
+&lt;p&gt;Tables aren&#x27;t part of the core Markdown spec, but Zola supports them
+out-of-the-box.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;&#x2F;th&gt;&lt;th&gt;Age&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Bob&lt;&#x2F;td&gt;&lt;td&gt;27&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Alice&lt;&#x2F;td&gt;&lt;td&gt;23&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h4 id=&quot;inline-markdown-within-tables&quot;&gt;Inline Markdown within tables&lt;&#x2F;h4&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Italics&lt;&#x2F;th&gt;&lt;th&gt;Bold&lt;&#x2F;th&gt;&lt;th&gt;Code&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;italics&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;strong&gt;bold&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;code&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code Blocks&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;code-block-with-backticks&quot;&gt;Code block with backticks&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;!doctype html&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;en&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;charset&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;utf-8&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Example HTML5 Document&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Test&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;code-block-indented-with-four-spaces&quot;&gt;Code block indented with four spaces&lt;&#x2F;h4&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;!doctype html&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;head&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;&#x2F;title&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;head&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;body&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;p&amp;gt;Test&amp;lt;&#x2F;p&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;body&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;html&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;ordered-list&quot;&gt;Ordered List&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;First item&lt;&#x2F;li&gt;
+&lt;li&gt;Second item&lt;&#x2F;li&gt;
+&lt;li&gt;Third item&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;unordered-list&quot;&gt;Unordered List&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;List item&lt;&#x2F;li&gt;
+&lt;li&gt;Another item&lt;&#x2F;li&gt;
+&lt;li&gt;And another item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;nested-list&quot;&gt;Nested list&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fruit
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;&#x2F;li&gt;
+&lt;li&gt;Orange&lt;&#x2F;li&gt;
+&lt;li&gt;Banana&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Dairy
+&lt;ul&gt;
+&lt;li&gt;Milk&lt;&#x2F;li&gt;
+&lt;li&gt;Cheese&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;other-elements-abbr-sub-sup-kbd-mark&quot;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;abbr title=&quot;Graphics Interchange Format&quot;&gt;GIF&lt;&#x2F;abbr&gt; is a bitmap image format.&lt;&#x2F;p&gt;
+&lt;p&gt;H&lt;sub&gt;2&lt;&#x2F;sub&gt;O&lt;&#x2F;p&gt;
+&lt;p&gt;X&lt;sup&gt;n&lt;&#x2F;sup&gt; + Y&lt;sup&gt;n&lt;&#x2F;sup&gt; = Z&lt;sup&gt;n&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;&#x2F;kbd&gt;+&lt;kbd&gt;ALT&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Delete&lt;&#x2F;kbd&gt;&lt;&#x2F;kbd&gt; to end the
+session.&lt;&#x2F;p&gt;
+&lt;p&gt;Most &lt;mark&gt;salamanders&lt;&#x2F;mark&gt; are nocturnal, and hunt for insects, worms, and
+other small creatures.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;!-- Note: There must be a blank line between every two lines of the footnote difinition.  --&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;The above quote is excerpted from Rob Pike&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=PAAkCSZUG1c&quot;&gt;talk&lt;&#x2F;a&gt;
+during Gopherfest, November 18, 2015.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;The quote is the first sentence of Aristotle&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;classics.mit.edu&#x2F;Aristotle&#x2F;metaphysics.html&quot;&gt;Metaphysics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Placeholder Text</title>
+		<published>2021-04-10T09:19:42+00:00</published>
+		<updated>2021-04-10T09:19:42+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/placeholder-text/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/blog/placeholder-text/</id>
+		<content type="html">&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo. &lt;!--more--&gt;Redit
+teque digerit hominumque toris verebor lumina non cervice subde tollit usus
+habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus
+inhospita parcite confusaque translucet patri vestro qui optatis lumine
+cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Exierant elisi ambit vivere dedere&lt;&#x2F;li&gt;
+&lt;li&gt;Duce pollice&lt;&#x2F;li&gt;
+&lt;li&gt;Eris modo&lt;&#x2F;li&gt;
+&lt;li&gt;Spargitque ferrea quos palude&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus
+silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;&#x2F;li&gt;
+&lt;li&gt;Post torum vates letum Tiresia&lt;&#x2F;li&gt;
+&lt;li&gt;Flumen querellas&lt;&#x2F;li&gt;
+&lt;li&gt;Arcanaque montibus omnes&lt;&#x2F;li&gt;
+&lt;li&gt;Quidem et&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;vagus-elidunt&quot;&gt;Vagus elidunt&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;svg class=&quot;canon&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; overflow=&quot;visible&quot; viewBox=&quot;0 0 496 373&quot; height=&quot;373&quot; width=&quot;496&quot;&gt;&lt;g fill=&quot;none&quot;&gt;&lt;path stroke=&quot;#000&quot; stroke-width=&quot;.75&quot; d=&quot;M.599 372.348L495.263 1.206M.312.633l494.95 370.853M.312 372.633L247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134L165.104 124.515&quot;&gt;&lt;&#x2F;path&gt;&lt;path stroke=&quot;#ED1C24&quot; stroke-width=&quot;.75&quot; d=&quot;M275.73 41.616h166.224v249.05H275.73zM54.478 41.616h166.225v249.052H54.478z&quot;&gt;&lt;&#x2F;path&gt;&lt;path stroke=&quot;#000&quot; stroke-width=&quot;.75&quot; d=&quot;M.479.375h495v372h-495zM247.979.875v372&quot;&gt;&lt;&#x2F;path&gt;&lt;ellipse cx=&quot;498.729&quot; cy=&quot;177.625&quot; rx=&quot;.75&quot; ry=&quot;1.25&quot;&gt;&lt;&#x2F;ellipse&gt;&lt;ellipse cx=&quot;247.229&quot; cy=&quot;377.375&quot; rx=&quot;.75&quot; ry=&quot;1.25&quot;&gt;&lt;&#x2F;ellipse&gt;&lt;&#x2F;g&gt;&lt;&#x2F;svg&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Canons_of_page_construction#Van_de_Graaf_canon&quot;&gt;The Van de Graaf Canon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mane-refeci-capiebant-unda-mulcebat&quot;&gt;Mane refeci capiebant unda mulcebat&lt;&#x2F;h2&gt;
+&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit
+colit est profanae esse virescere furit nec; iaculi matertera et visa est,
+viribus. Divesque creatis, tecta novat collumque vulnus est, parvas.
+&lt;strong&gt;Faces illo pepulere&lt;&#x2F;strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet,
+sidus sequendo urbis.&lt;&#x2F;p&gt;
+&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli
+Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare
+Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert
+ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae
+vulnus haerentia iuste et exercebat, sui et.&lt;&#x2F;p&gt;
+&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit
+sequitur. Vel &lt;strong&gt;mitis temploque&lt;&#x2F;strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;&#x2F;em&gt; non silvis
+corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti
+flumina mortis facto sic: undique a alios vincula sunt iactata abdita!
+Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;style&gt;
+.canon { background: white; width: 100%; height: auto; }
+&lt;&#x2F;style&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Math Typesetting</title>
+		<published>2021-04-08T09:19:42+00:00</published>
+		<updated>2021-04-08T09:19:42+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/math-typesetting/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/blog/math-typesetting/</id>
+		<content type="html">&lt;p&gt;In this example we will be using &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a macro under &lt;code&gt;&#x2F;template&#x2F;macros&#x2F;math.html&lt;&#x2F;code&gt; with a macro named &lt;code&gt;math&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Within this macro reference the &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;docs&#x2F;autorender.html&quot;&gt;Auto-render Extension&lt;&#x2F;a&gt; or host these scripts locally.&lt;&#x2F;li&gt;
+&lt;li&gt;Import the macro in your templates like so:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span&gt;% import &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;macros&#x2F;math.html&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; as macros %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span&gt;% if page.extra.math or section.extra.math or config.extra.math %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;{{&lt;&#x2F;span&gt;&lt;span&gt; macros::math() }}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span&gt;% endif %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;extra.math&lt;&#x2F;code&gt; to &lt;code&gt;true&lt;&#x2F;code&gt; in a project&#x27;s configuration&lt;&#x2F;li&gt;
+&lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;extra.math = true&lt;&#x2F;code&gt; in content files&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; &lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;The MathJax library is the other optional choice, and you can set the parameter &lt;code&gt;extra.library&lt;&#x2F;code&gt; to &lt;code&gt;mathjax&lt;&#x2F;code&gt; in a project&#x27;s configuration&lt;&#x2F;li&gt;
+&lt;li&gt;Use the online reference of &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;docs&#x2F;supported.html&quot;&gt;Supported TeX Functions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;&#x2F;h3&gt;
+&lt;p&gt;
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\) 
+&lt;&#x2F;p&gt;
+&lt;p&gt;Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+$$&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Say hello to AdiDoks 👋</title>
+		<published>2021-04-03T07:00:00+00:00</published>
+		<updated>2021-04-03T07:00:00+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/blog/say-hello-to-zola-doks/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/blog/say-hello-to-zola-doks/</id>
+		<content type="html"></content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Francois Teychene</title>
+		<published>2021-04-01T08:50:45+00:00</published>
+		<updated>2021-04-01T08:50:45+00:00</updated>
+		<link rel="alternate" href="https://courses.fteychene.gihub.io/authors/fteychene/" type="text/html"/>
+		<id>https://courses.fteychene.gihub.io/authors/fteychene/</id>
+		<content type="html">&lt;p&gt;Hey 👋&lt;br &#x2F;&gt;
+I&#x27;m the original creator of site for my courses. If there is someone else someday it would not have been prepared.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fteychene&quot;&gt;@fteychene&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
