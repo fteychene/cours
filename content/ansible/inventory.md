@@ -6,7 +6,7 @@ updated = 2021-05-01T08:00:00+00:00
 draft = false
 sort_by = "weight"
 weight = 430
-template = "docs/page.html"
+template = "ansible/page.html"
 
 [extra]
 toc = true

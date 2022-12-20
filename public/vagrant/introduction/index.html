@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" as="font" href="https://fteychene.github.io/learning-courses/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://fteychene.github.io/learning-courses/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://fteychene.github.io/learning-courses/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Introduction | fteychene-learning</title>
+<meta name="description" content="Introduction to Vagrant">
+<link rel="canonical" href="https://fteychene.github.io/learning-courses/vagrant/introduction/">
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://fteychene.github.io/learning-courses/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Vagrant",
+            "item": "https://fteychene.github.io/learning-courses/vagrant/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Introduction",
+            "item": "https://fteychene.github.io/learning-courses/vagrant/introduction/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fteychene.github.io/learning-courses/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fteychene.github.io/learning-courses/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fteychene.github.io/learning-courses/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://fteychene.github.io/learning-courses/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://fteychene.github.io/learning-courses/">fteychene-learning</a>
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/fteychene"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/fteychene/learning-courses"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/">Courses</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-md-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+					<h3>Vagrant</h3>
+					<ul class="list-unstyled">
+					                           
+							<li><a class="docs-link active" href="https://fteychene.github.io/learning-courses/vagrant/introduction/">Introduction</a></li>
+					                           
+							<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/">Vagrantfile</a></li>
+					
+					</ul>
+			
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#installation">Installation</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#first-vm">First VM</a></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#initialize-a-project-directory">Initialize a Project Directory</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#start-the-vm">Start the vm</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#connect-to-the-vm">Connect to the VM</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#stop-the-vm">Stop the VM</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/introduction/#recap">Recap</a></li>
+  											
+  									</ul>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Introduction</h1>
+        
+        <p>Vagrant is a tool to manage VMs with configuration options</p>
+<h2 id="installation">Installation</h2>
+<p>Installation instruction can be found on <a href="https://www.vagrantup.com/downloads.html">this page</a></p>
+<p>You can verify the installation by running the <code>vagrant</code> command.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">▶</span><span> vagrant
+</span><span style="color:#bf616a;">Usage:</span><span> vagrant </span><span style="color:#b48ead;">[</span><span>options</span><span style="color:#b48ead;">] </span><span>&lt;command&gt; </span><span style="color:#b48ead;">[</span><span>&lt;args&gt;</span><span style="color:#b48ead;">]
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">-v, --version</span><span>                    Print the version and exit.
+</span><span>    </span><span style="color:#bf616a;">-h, --help</span><span>                       Print this help.
+</span><span>
+</span><span style="color:#65737e;"># ...
+</span></code></pre>
+<aside class="info">
+Tip: If you receive an error that Vagrant is not found, try logging out and logging back in to your system (particularly necessary sometimes for Windows).
+</aside>
+<h2 id="first-vm">First VM</h2>
+<h3 id="initialize-a-project-directory">Initialize a Project Directory</h3>
+<p>Make a new directory for the project you will work on throughout these tutorials.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">▶</span><span> mkdir vagrant_getting_started
+</span></code></pre>
+<p>Move into your new directory.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">▶</span><span> cd vagrant_getting_started
+</span></code></pre>
+<h3 id="start-the-vm">Start the vm</h3>
+<p>Let's start by crate a VM with <code>vagrant</code>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">▶</span><span> vagrant init ubuntu/focal64
+</span><span style="color:#bf616a;">▶</span><span> vagrant up
+</span></code></pre>
+<p>The Vagrant command will download a <code>box</code> (the vagrant term for an VM image for a provider), create a VM based on this image and start it.<br />
+In our case it will start a VM based on the <code>Ubuntu Focal (20.04)</code> image.</p>
+<h3 id="connect-to-the-vm">Connect to the VM</h3>
+<p>Connect to to your running instance with <code>vagrant ssh</code></p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">▶</span><span> vagrant ssh
+</span><span style="color:#bf616a;">Welcome</span><span> to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-91-generic x86_64)
+</span><span>
+</span><span> </span><span style="color:#bf616a;">*</span><span> Documentation:  https://help.ubuntu.com
+</span><span> </span><span style="color:#bf616a;">*</span><span> Management:     https://landscape.canonical.com
+</span><span> </span><span style="color:#bf616a;">*</span><span> Support:        https://ubuntu.com/advantage
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">System</span><span> information as of Sun Dec 19 21:01:28 UTC 2021
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">System</span><span> load:  0.75              Processes:               122
+</span><span>  </span><span style="color:#bf616a;">Usage</span><span> of /:   3.3% of 38.71GB   Users logged in:         0
+</span><span>  </span><span style="color:#bf616a;">Memory</span><span> usage: 21%               IPv4 address for enp0s3: 10.0.2.15
+</span><span>  </span><span style="color:#bf616a;">Swap</span><span> usage:   0%
+</span><span>
+</span><span>
+</span><span style="color:#bf616a;">1</span><span> update can be applied immediately.
+</span><span style="color:#bf616a;">To</span><span> see these additional updates run: apt list</span><span style="color:#bf616a;"> --upgradable
+</span><span>
+</span><span>
+</span><span style="color:#bf616a;">vagrant@ubuntu-focal:~$
+</span></code></pre>
+<p>You are now connected to your running VM, you can try to break it for fun.<br />
+Exit when you are ready to continue.</p>
+<h3 id="stop-the-vm">Stop the VM</h3>
+<p>To destroy the running VM <code>vagrant destroy</code></p>
+<h3 id="recap">Recap</h3>
+<p>We have seen that Vagrant can run boxes (a preconfigured images of a VM for a provider), and help us manage the running VM.</p>
+<p>In the rest of this code lab we will see how to configure Vagrant to automaticcaly manage and configure created VMs.</p>
+<aside class="info">
+In this codelab we will use Virtualbox as VM provider because it's the most portable one.
+But many other providers are supported by Vagrant, you can check the list on <a href="https://www.vagrantup.com/docs/providers">the Provider documentation</a>
+</aside>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+            
+            
+            
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+          
+          
+          <a class="ms-auto" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;ansible&#x2F;introduction&#x2F;">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                Ansible &rarr;
+              </div>
+            </div>
+          </a>
+          
+          
+          
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item">Powered by <a href="https://github.com/">Github</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://fteychene.github.io/learning-courses/js/main.js" defer></script>
+
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/plugins/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/js/search.js" defer></script>
+
+  
+</body>
+</html>

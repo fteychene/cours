@@ -4,6 +4,25 @@
         <loc>https://fteychene.github.io/learning-courses/</loc>
     </url>
     <url>
+        <loc>https://fteychene.github.io/learning-courses/ansible/</loc>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/ansible/basics/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/ansible/introduction/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/ansible/inventory/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/ansible/playbooks/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://fteychene.github.io/learning-courses/authors/</loc>
     </url>
     <url>
@@ -17,26 +36,11 @@
         <loc>https://fteychene.github.io/learning-courses/docs/</loc>
     </url>
     <url>
-        <loc>https://fteychene.github.io/learning-courses/docs/ansible/</loc>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/docs/ansible/basics/</loc>
-        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/docs/ansible/introduction/</loc>
-        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/docs/ansible/inventory/</loc>
-        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://fteychene.github.io/learning-courses/docs/ansible/playbooks/</loc>
-        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
-    </url>
-    <url>
         <loc>https://fteychene.github.io/learning-courses/docs/getting-started/</loc>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/docs/getting-started/ansible/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
     </url>
     <url>
         <loc>https://fteychene.github.io/learning-courses/docs/getting-started/introduction/</loc>
@@ -44,5 +48,16 @@
     </url>
     <url>
         <loc>https://fteychene.github.io/learning-courses/privacy-policy/</loc>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/vagrant/</loc>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/vagrant/introduction/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fteychene.github.io/learning-courses/vagrant/vagrantfile/</loc>
+        <lastmod>2021-05-01T08:00:00+00:00</lastmod>
     </url>
 </urlset>

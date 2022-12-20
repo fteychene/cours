@@ -20,9 +20,13 @@
 
   
   
+    
+    
+  
+  
   
     
-    
+  
   
   
   
@@ -42,9 +46,9 @@
 
 	
 
-<title>Ansible | fteychene-learning</title>
-<meta name="description" content="Ansible learning">
-<link rel="canonical" href="https://fteychene.github.io/learning-courses/docs/ansible/">
+<title>Ansible - Introduction | fteychene-learning</title>
+<meta name="description" content="Introduction to Ansible">
+<link rel="canonical" href="https://fteychene.github.io/learning-courses/docs/getting-started/ansible/">
 
 
 
@@ -94,13 +98,34 @@
         
         
         
+        
+        
+        
           
           
           {
             "@type": "ListItem",
             "position":  3 ,
+            "name": "Getting Started",
+            "item": "https://fteychene.github.io/learning-courses/docs/getting-started/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
             "name": "Ansible",
-            "item": "https://fteychene.github.io/learning-courses/docs/ansible/"
+            "item": "https://fteychene.github.io/learning-courses/docs/getting-started/ansible/"
           },
         
       
@@ -128,7 +153,7 @@
 
   
 
-<body class="docs list">
+<body class="docs single">
   
   
   
@@ -145,12 +170,15 @@
 		</button>
 		<ul class="navbar-nav fork-me order-3 order-md-5">
 			
-				<li class="nav-item">
-					<a class="nav-link" href="https://twitter.com/aaranxu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://github.com/aaranxu/adidoks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
-				</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/fteychene"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/fteychene/learning-courses"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
 			
 		</ul>
 		<div class="collapse navbar-collapse order-4 order-md-1">
@@ -162,7 +190,7 @@
 				
 					
 						<li class="nav-item">
-							<a class="nav-link" href="https://fteychene.github.io/learning-courses/docs/">Courses</a>
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/">Courses</a>
 						</li>
 					
 				
@@ -184,43 +212,73 @@
   
 <div class="wrap container" role="document">
   <div class="content">
-    <div class="row justify-content-center">
-      <div class="col-md-12 col-lg-10 col-xxl-8">
-        <article>
-          <h1 class="text-center">Ansible</h1>
-          <div class="text-center"></div>
-          <div class="card-list">
-            
-            
-            
-              <div class="card my-3">
-                <div class="card-body">
-                  <a class="stretched-link" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;ansible&#x2F;introduction&#x2F;">Ansible &rarr;</a>
-                </div>
-              </div>
-            
-              <div class="card my-3">
-                <div class="card-body">
-                  <a class="stretched-link" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;ansible&#x2F;basics&#x2F;">Basic &rarr;</a>
-                </div>
-              </div>
-            
-              <div class="card my-3">
-                <div class="card-body">
-                  <a class="stretched-link" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;ansible&#x2F;inventory&#x2F;">Inventory &rarr;</a>
-                </div>
-              </div>
-            
-              <div class="card my-3">
-                <div class="card-body">
-                  <a class="stretched-link" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;docs&#x2F;ansible&#x2F;playbooks&#x2F;">Playbooks &rarr;</a>
-                </div>
-              </div>
-            
-            
-          </div>
-        </article>
-      </div>
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/docs/getting-started/introduction/">Getting-started</a></li>
+							                           
+									<li><a class="docs-link active" href="https://fteychene.github.io/learning-courses/docs/getting-started/ansible/">Ansible - Introduction</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Ansible - Introduction</h1>
+        
+        <p>This is a basic introduction to Ansible.<br />
+We'll see the fundamentals of the solution. How it work, how to run commands, setup a basic inventory and cereate your first playbook.</p>
+<a class="btn btn-primary btn-lg px-4 mb-2" href="https://fteychene.github.io/learning-courses/ansible/introduction" role="button">Start</a>
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+  
+</div>
+
+      </main>
     </div>
   </div>
 </div>

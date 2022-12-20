@@ -32,7 +32,7 @@
         </div>
         <div class="col-lg-9 col-xl-8 text-center">
           <p class="lead">{{ section.extra.lead | default(value="Please start setting config.toml and adding your content.") | safe }}</p>
-          <p class="meta">{{ section.extra.repo_license | default(value="MIT")}} <a href="{{ section.extra.repo_url | default(value="https://github.com/fteychene/courses") | safe }}">{{ section.extra.repo_version | default(value="0.1.0") }}</a></p>
+          <p class="meta">{{ section.extra.repo_license | default(value="MIT")}} <a href="{{ section.extra.repo_url | default(value="https://github.com/fteychene/learning-courses") | safe }}">{{ section.extra.repo_version | default(value="0.1.0") }}</a></p>
         </div>
       </div>
     </section>
@@ -45,11 +45,15 @@
       {% if section.extra.list %}
         {% for val in section.extra.list %}
         <div class="col-lg-5">
-          <h2 class="h4">{{ val.title }}</h2>
-          <p>{{ val.content | safe }}</p>
-          {% if val.url_button and val.url %}
-          <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ get_url(path=val.url) | safe }}" role="button">{{ val.url_button }}</a>
-          {% endif %}
+          <div class="card border-light">
+            <div class="card-body">
+              <h5 class="card-title">{{ val.title }}</h5>
+              <p class="card-text">{{ val.content | safe }}</p>
+              {% if val.url_button and val.url %}
+              <a class="btn btn-primary px-4 mb-2" href="{{ get_url(path=val.url) | safe }}" role="button">{{ val.url_button }}</a>
+              {% endif %}
+            </div>
+          </div>
         </div>
         {% endfor %}
       {% else %}

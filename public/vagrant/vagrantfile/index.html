@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" as="font" href="https://fteychene.github.io/learning-courses/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://fteychene.github.io/learning-courses/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://fteychene.github.io/learning-courses/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Vagrantfile | fteychene-learning</title>
+<meta name="description" content="Courses and resources for learning for students">
+<link rel="canonical" href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/">
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://fteychene.github.io/learning-courses/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Vagrant",
+            "item": "https://fteychene.github.io/learning-courses/vagrant/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Vagrantfile",
+            "item": "https://fteychene.github.io/learning-courses/vagrant/vagrantfile/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fteychene.github.io/learning-courses/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fteychene.github.io/learning-courses/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fteychene.github.io/learning-courses/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://fteychene.github.io/learning-courses/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://fteychene.github.io/learning-courses/">fteychene-learning</a>
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/fteychene"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/fteychene/learning-courses"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://fteychene.github.io/learning-courses/">Courses</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-md-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+					<h3>Vagrant</h3>
+					<ul class="list-unstyled">
+					                           
+							<li><a class="docs-link" href="https://fteychene.github.io/learning-courses/vagrant/introduction/">Introduction</a></li>
+					                           
+							<li><a class="docs-link active" href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/">Vagrantfile</a></li>
+					
+					</ul>
+			
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#vagrantfile">Vagrantfile</a></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#network-basics">Network basics</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#synchronize-local-and-guest-files">Synchronize Local and Guest Files</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#provisioning">Provisioning</a></li>
+  											
+  											<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#find-more-boxes">Find More Boxes</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#exercice">Exercice</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#multiple-machines">Multiple machines</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#exercice-1">Exercice</a></li>
+  							
+  							
+  							<li><a href="https://fteychene.github.io/learning-courses/vagrant/vagrantfile/#congratulations-tada">Congratulations 🎉</a></li>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Vagrantfile</h1>
+        
+        <h2 id="vagrantfile">Vagrantfile</h2>
+<p>When we ran the <code>vagrant init ubuntu/xenial64</code> command, if you looked closely to the command output, you've seen that a <code>Vagrantfile</code> have been created in your current directory.<br />
+This file is the configuration file of the VM and it's the information source for the <code>vagrant</code> command.</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#65737e;"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure
+</span><span style="color:#65737e;"># configures the configuration version (we support older styles for
+</span><span style="color:#65737e;"># backwards compatibility). Please don&#39;t change it unless you know what
+</span><span style="color:#65737e;"># you&#39;re doing.
+</span><span style="color:#ebcb8b;">Vagrant</span><span>.configure(&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;) </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">config</span><span>|
+</span><span>  </span><span style="color:#65737e;"># The most common configuration options are documented and commented below.
+</span><span>  </span><span style="color:#65737e;"># For a complete reference, please see the online documentation at
+</span><span>  </span><span style="color:#65737e;"># https://docs.vagrantup.com.
+</span><span>
+</span><span>  </span><span style="color:#65737e;"># Every Vagrant development environment requires a box. You can search for
+</span><span>  </span><span style="color:#65737e;"># boxes at https://vagrantcloud.com/search.
+</span><span>  config.vm.box = &quot;</span><span style="color:#a3be8c;">ubuntu/focal64</span><span>&quot;
+</span><span>
+</span><span>  ...
+</span><span style="color:#b48ead;">end
+</span></code></pre>
+<p>The configuration is heavily documented. I invite you to read the configurations availables and the quick explanation.<br />
+The documentation is also available <a href="https://docs.vagrantup.com">here</a></p>
+<h3 id="network-basics">Network basics</h3>
+<p>There are a lot of options available in Vargant for configuring Virtual Machines but we will cover only some of them.
+The first one we're going to look at are network basics.</p>
+<p>You can define Virtual Machine ip's as part of a private network using the following configuration :</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span>config.vm.network </span><span style="color:#a3be8c;">:private_network</span><span>, </span><span style="color:#a3be8c;">ip: </span><span>&quot;</span><span style="color:#a3be8c;">192.168.0.2</span><span>&quot;
+</span></code></pre>
+<p>This configuraiton will create a VM's with a defined IP of <code>192.168.0.2</code>. 
+This allow us to create some static private network configuration to expose our VM in to our host tooling easily.</p>
+<p>We could also use prot forwarding.</p>
+<p>Port forwarding allows you to specify ports on the guest machine to share via a port on the host machine. This allows you to access a port on your own machine, but actually have all the network traffic forwarded to a specific port on the guest machine.</p>
+<p>Set up a forwarded port so you can access by exemple an Ngionx in your guest, by adding it to the Vagrantfile under the line you added to run your bootstrap script :</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span>config.vm.network </span><span style="color:#a3be8c;">:forwarded_port</span><span>, </span><span style="color:#a3be8c;">guest: </span><span style="color:#d08770;">80</span><span>, </span><span style="color:#a3be8c;">host: </span><span style="color:#d08770;">4567
+</span></code></pre>
+<h3 id="synchronize-local-and-guest-files">Synchronize Local and Guest Files</h3>
+<p>Vagrant automatically syncs files to and from the guest machine. This way you can edit files locally and run them in your virtual development environment.</p>
+<p>By default, Vagrant shares your project directory (the one containing the Vagrantfile) to the <code>/vagrant</code> directory in your guest machine.
+Synced folders are configured within your Vagrantfile using the <code>config.vm.synced_folder</code> method. Usage of the configuration directive is very simple:</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#ebcb8b;">Vagrant</span><span>.configure(&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;) </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">config</span><span>|
+</span><span>  config.vm.synced_folder &quot;</span><span style="color:#a3be8c;">src/</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/srv/website</span><span>&quot;</span><span style="color:#b48ead;">end
+</span></code></pre>
+<p>The first parameter is a path to a directory on the host machine. If the path is relative, it is relative to the project root. The second parameter must be an absolute path of where to share the folder within the guest machine. This folder will be created (recursively, if it must) if it does not exist. By default, Vagrant mounts the synced folders with the owner/group set to the SSH user and any parent folders set to root.</p>
+<h3 id="provisioning">Provisioning</h3>
+<p>On the last part on the <code>Vagrantfile</code> there is a section with an interesting part : the provisionning section.<br />
+Reinstall a VM could be an really easy but boring task to execute on each instanciation.<br />
+The provisionning part will let you define some tasks to be automatically executed by vagrant on the machine startup.</p>
+<p>Here is one exemple of the configuration based on the <code>shell</code> inline provisionning :</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#65737e;"># Enable provisioning with a shell script. Additional provisioners such as
+</span><span style="color:#65737e;"># Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+</span><span style="color:#65737e;"># documentation for more information about their specific syntax and use.
+</span><span>config.vm.provision &quot;</span><span style="color:#a3be8c;">shell</span><span>&quot;, </span><span style="color:#a3be8c;">inline: </span><span>&lt;&lt;-SHELL
+</span><span>  </span><span style="color:#bf616a;">cat </span><span>&quot;</span><span style="color:#a3be8c;">File created by provisioning &gt;&gt; /tmp/witness</span><span>&quot;
+</span><span style="color:#bf616a;">SHELL
+</span></code></pre>
+<p>Try this setup by starting the VM and check the created file : </p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>▶ vagrant up
+</span><span>▶ vagrant ssh
+</span><span>...
+</span><span>vagrant@ubuntu-xenial:~$ cat /tmp/witness
+</span><span>File created by provisioning
+</span></code></pre>
+<aside class="positive">
+Another great thing : you can relaunch the provisioning of the VM without recreate it with the command `vagrant up --provision`.
+</aside>
+<h3 id="find-more-boxes">Find More Boxes</h3>
+<p>At this point we only have used a <code>ubuntu/focal64</code> box</p>
+<p>The best place to find more boxes is <a href="https://vagrantcloud.com/boxes/search">HashiCorp's Vagrant Cloud box catalog</a>. 
+HashiCorp's Vagrant Cloud has a public directory of freely available boxes that run various platforms and technologies. You can search Vagrant Cloud to find the box you care about.</p>
+<h2 id="exercice">Exercice</h2>
+<p>Create a <code>Vagrantfile</code> to configure a VM with a fixed ip <code>10.30.0.1</code> and a <code>nginx</code> http server installed on provisionning.<br />
+You should be able to see the <code>nginx</code> homepage at <code>http://10.30.0.1</code></p>
+<h2 id="multiple-machines">Multiple machines</h2>
+<p>You can configure a <code>Vagrantfile</code> for multiples VMs at the same time.</p>
+<p>You need to use the function <code>vm.define</code> is the main VM configuration like the following configuration.</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#ebcb8b;">Vagrant</span><span>.configure(&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;) </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">config</span><span>|
+</span><span>  config.vm.provision &quot;</span><span style="color:#a3be8c;">shell</span><span>&quot;, </span><span style="color:#a3be8c;">inline: </span><span>&quot;</span><span style="color:#a3be8c;">echo Common provisioning</span><span>&quot;
+</span><span>
+</span><span>  config.vm.define &quot;</span><span style="color:#a3be8c;">web</span><span>&quot; </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">web</span><span>|
+</span><span>    web.vm.box = &quot;</span><span style="color:#a3be8c;">ubuntu/focal64</span><span>&quot;
+</span><span>    web.vm.provision &quot;</span><span style="color:#a3be8c;">shell</span><span>&quot;, </span><span style="color:#a3be8c;">inline: </span><span>&quot;</span><span style="color:#a3be8c;">echo Provisioning for Web only</span><span>&quot;
+</span><span>  </span><span style="color:#b48ead;">end
+</span><span>
+</span><span>  config.vm.define &quot;</span><span style="color:#a3be8c;">db</span><span>&quot; </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">db</span><span>|
+</span><span>    db.vm.box = &quot;</span><span style="color:#a3be8c;">ubuntu/focal64</span><span>&quot;
+</span><span>    db.vm.provision &quot;</span><span style="color:#a3be8c;">shell</span><span>&quot;, </span><span style="color:#a3be8c;">inline: </span><span>&quot;</span><span style="color:#a3be8c;">echo Provisioning for Db only</span><span>&quot;
+</span><span>  </span><span style="color:#b48ead;">end
+</span><span style="color:#b48ead;">end
+</span></code></pre>
+<p>Try to run this configuration.<br />
+You should see two VMs starting each provisionning the common part and it's custom part.</p>
+<p>By default, your <code>vagrant ssh</code> will connect to the main vm (the first configured).<br />
+You can change it with :</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span>config.vm.define &quot;</span><span style="color:#a3be8c;">web</span><span>&quot;, </span><span style="color:#a3be8c;">primary: </span><span style="color:#d08770;">true </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">web</span><span>|
+</span><span>  </span><span style="color:#65737e;"># ...
+</span><span style="color:#b48ead;">end
+</span></code></pre>
+<p>You can also choose the connection VM with <code>vagrant ssh db</code></p>
+<p>The official documentation can be found <a href="https://www.vagrantup.com/docs/multi-machine/">here</a></p>
+<h2 id="exercice-1">Exercice</h2>
+<p>Create a <code>Vagrantfile</code> to create 2 VMs, one with a <code>mysql</code> service installed and <code>mysql-client</code> tool on the other.
+Try to connect on the VM with the client and connect to the other VM with the Mysql server.</p>
+<h2 id="congratulations-tada">Congratulations 🎉</h2>
+<p>This was only a getting started with <a href="https://www.vagrantup.com/">Vagrant</a>. You can explore it your self or continue to another codelab.</p>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+            
+            
+            
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+          
+          
+          <a class="ms-auto" href="https:&#x2F;&#x2F;fteychene.github.io&#x2F;learning-courses&#x2F;ansible&#x2F;introduction&#x2F;">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                Ansible &rarr;
+              </div>
+            </div>
+          </a>
+          
+          
+          
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item">Powered by <a href="https://github.com/">Github</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://fteychene.github.io/learning-courses/js/main.js" defer></script>
+
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/plugins/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://fteychene.github.io/learning-courses/js/search.js" defer></script>
+
+  
+</body>
+</html>

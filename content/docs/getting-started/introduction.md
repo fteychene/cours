@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = 'Courses are grouped by theme. Chooe the one you want to follor'
+lead = 'Courses are grouped by theme. Chooe the one you want to follow'
 toc = false
 top = false
 +++

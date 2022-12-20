@@ -13,14 +13,19 @@ repo_url = "https://github.com/fteychene/learning"
 [[extra.menu.main]]
 name = "Courses"
 section = "courses"
-url = "/docs/"
+url = "/"
 weight = 10
 
+[[extra.list]]
+title = "Vagrant"
+content = "Vagrant is a tool to manage VMs with configuration options"
+url = "/vagrant/introduction/"
+url_button = "Start"
 
 [[extra.list]]
 title = "Ansible"
-content = "An introduction to Ansible"
-url = "/docs/ansible/introduction/"
-url_button = "Ansible"
+content = "Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates."
+url = "/ansible/introduction/"
+url_button = "Start"
 
 +++
