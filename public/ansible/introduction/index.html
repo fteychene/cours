@@ -233,6 +233,8 @@
   							
   									<ul>
   											
+  											<li><a href="https://fteychene.github.io/learning-courses/ansible/introduction/#manual">Manual</a></li>
+  											
   											<li><a href="https://fteychene.github.io/learning-courses/ansible/introduction/#vagrant-vm">Vagrant VM</a></li>
   											
   									</ul>
@@ -260,6 +262,15 @@ Since Ansible is a trool to manage remote machines it choose to use ssh connecti
 Ensure that you have ssh configuration well configured if you are on Windows environment.
 </aside>
 <h2 id="local-test-setup">Local test setup</h2>
+<h3 id="manual">Manual</h3>
+<p>To test ansible connection you need to be able to connect to a machine trhough ssh.<br />
+<em>For the manipulation's sake and to try out tasks I encourage you to use a user that can have root access on the machine.</em></p>
+<p>On the said machine you'll need to have</p>
+<ul>
+<li>ssh activated and available for a user</li>
+<li>Python (version depend on your ansible installation check <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#node-requirement-summary">the installation instructions</a>)</li>
+</ul>
+<p>You can connect on your own laptop by targeting localhost if you want but I discourage this solution.</p>
 <h3 id="vagrant-vm">Vagrant VM</h3>
 <p>Create a fresh VM with <code>vagrant</code> to use ansible on it with the following configuration</p>
 <pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span style="color:#ebcb8b;">Vagrant</span><span>.configure(&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;) </span><span style="color:#b48ead;">do </span><span>|</span><span style="color:#bf616a;">config</span><span>|

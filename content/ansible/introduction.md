@@ -38,6 +38,18 @@ Ensure that you have ssh configuration well configured if you are on Windows env
 
 ## Local test setup
 
+### Manual
+
+To test ansible connection you need to be able to connect to a machine trhough ssh.  
+_For the manipulation's sake and to try out tasks I encourage you to use a user that can have root access on the machine._  
+
+On the said machine you'll need to have
+ - ssh activated and available for a user
+ - Python (version depend on your ansible installation check [the installation instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#node-requirement-summary))
+
+
+You can connect on your own laptop by targeting localhost if you want but I discourage this solution.
+
 ### Vagrant VM
 
 Create a fresh VM with `vagrant` to use ansible on it with the following configuration
